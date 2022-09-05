@@ -1,0 +1,17 @@
+Program for 8bit arithmatic operations for 8086:
+
+Addition of two 8-bit numbers:
+
+Registers used: AL,BL
+Software Used: Micro Assembler (MASM)
+
+Program
+
+assume cs:code  ; move code segment
+code segment	; Starting code
+mov al,02h	; mov 2h into al register
+mov bl,03h	; mov 10h into bl register
+add al,bl	; adding al,bl contents
+int 3h		; Break point interrupt
+code ends	; end of code segment
+end		; end of program
