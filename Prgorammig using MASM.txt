@@ -1,0 +1,40 @@
+Steps for programming:-
+
+ Changing Z to C drive and directory to 8086
+
+z:\>  mount c c:\
+z:>   c:
+c:\>  cd 8086
+c:\8086> 
+
+Editor: This is used to open the editor for entering code
+Step1: 
+
+c:\8086> masm filename.asm
+
+Step2:
+Linking: This is used to link the asm file to obj file
+
+c:\8086> link filename.obj
+
+The obj file is executed to generate the executable file 
+
+c:\8086> debug filename.exe
+
+-g : This is used for entire program execution 
+
+-t : line by line execution 
+
+-u : unassemble the code 
+
+-q : To exit the debugger 
+
+-d<adress of segment>:0
+
+Eg: d 076b:0
+
+Basic 8086 Program Structure 
+
+Any 8086 program consists of two parts:
+1. Directives (For the assembler)
+2. Instruction and Values (For the compiler)
