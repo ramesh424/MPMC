@@ -1,0 +1,29 @@
+Programs for 16-bit arithmetic operations for 8086 using various Addressing
+Modes.
+ASSUME CS:code, DS:data ; Define CS= code segment and DS = data segment
+DATA SEGMENT
+NO1 DW 1234H
+NO2 DW 459ADIH
+RES DW 10 DUP (0)
+DATA ENDS
+CODE SEGMENT
+START: MOV AX, DATA ; Initialize data segment
+MOV DS,AX
+MOV SI, OFFSET NO1 ; Load SI with no1 address MOV
+BX, OFFSET NO2 ; Load BX with no2 address
+MOV DI, OFFSET RES ; Load DI register with result address
+MOV AX,[SI] ; Load AX register with no1
+MOV DX,[BX] ; Load DX register with no2
+ADD AX,DX ; Addition operation in register addressing mode
+MOV [DI],AX ; Store the result with indirect addressing mode
+ADD DI,0002 ; Increment address pointer
+ADD AX,0002H ; Addition with immediate addressing mode
+ADD DI,0002H
+ADD AX,[2000H] ; Addition with direct addressing mode
+MOV [DI],AX
+ADD AX,[BX][SI] ; Addition with base indexed addressing mode
+MOV [DI],AX
+ADD AX,10H[BX][SI] ; Addition with relative base indexed addressing
+INT 3H
+CODE ENDS
+END START
