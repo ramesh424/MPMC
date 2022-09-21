@@ -3,7 +3,7 @@ Modes.
 ASSUME CS:code, DS:data ; Define CS= code segment and DS = data segment
 DATA SEGMENT
 NO1 DW 1234H
-NO2 DW 459ADIH
+NO2 DW 459AH
 RES DW 10 DUP (0)
 DATA ENDS
 CODE SEGMENT
