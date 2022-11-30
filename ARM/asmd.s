@@ -5,7 +5,6 @@
 ;For Example:  Your Name, Student Number, what the program is for, and what it does etc.
 
 ;;; Directives
-STACK_ADDR_123G EQU 0x20008000
           PRESERVE8
           THUMB       
  
